@@ -49,7 +49,7 @@ public class ArtistInOrder {
 	    int select = 5;
 	    new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
 	    String artist =  driverOpera.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\""+ select +"\"]")).getText();
-	    String salon = new String(driverOpera.findElement(By.id("saloon_hide")).getText());
+	    String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
 	    String date = "10-03 10:10";
 
 	    new Select(driverOpera.findElement(LocatorsT.selectDay)).selectByIndex(10);

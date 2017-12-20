@@ -41,7 +41,7 @@ public class Sizes {
     int select = 2;
     new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
     String artist =  driverOpera.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\""+ select +"\"]")).getText();
-    String salon = new String(driverOpera.findElement(By.id("saloon_hide")).getText());
+    String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
     String date = "02/24/2018 6:00 AM";
     driverOpera.findElement(LocatorsT.selectDateInOrder).clear();
     driverOpera.findElement(LocatorsT.selectDateInOrder).sendKeys(date);

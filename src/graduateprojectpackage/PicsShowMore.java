@@ -44,7 +44,7 @@ public class PicsShowMore {
 	String date = "01/30/2018 12:00 AM";
 
 	String salon = new String(
-			driverOpera.findElement(By.id("saloon_hide")).getText());
+			driverOpera.findElement(LocatorsT.salonHide).getText());
     
      driverOpera.findElement(LocatorsT.selectDateInOrder).clear();
     driverOpera.findElement(LocatorsT.selectDateInOrder).sendKeys(date);

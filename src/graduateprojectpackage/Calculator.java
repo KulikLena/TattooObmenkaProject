@@ -45,7 +45,7 @@ public class Calculator {
     int select = 4;
     new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
     String artist =  driverOpera.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\""+ select +"\"]")).getText();
-    String salon = new String(driverOpera.findElement(By.id("saloon_hide")).getText());
+    String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
     String date = "25-03 14:05";
 
     new Select(driverOpera.findElement(LocatorsT.selectDay)).selectByIndex(25);

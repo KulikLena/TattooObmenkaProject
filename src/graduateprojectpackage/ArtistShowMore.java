@@ -44,7 +44,7 @@ public class ArtistShowMore {
 				.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
 		String date = "07/25/2018 9:00 AM";
 
-		String salon = new String(driverOpera.findElement(By.id("saloon_hide")).getText());
+		String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
 		driverOpera.findElement(LocatorsT.selectDateInOrder).clear();
 		driverOpera.findElement(LocatorsT.selectDateInOrder).sendKeys(date);
 		

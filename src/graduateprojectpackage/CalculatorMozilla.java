@@ -58,7 +58,7 @@ public class CalculatorMozilla {
 		new Select(driverMozilla.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
 		String artist = driverMozilla
 				.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
-		String salon = new String(driverMozilla.findElement(By.id("saloon_hide")).getText());
+		String salon = new String(driverMozilla.findElement(LocatorsT.salonHide).getText());
 		String date = "21-08 13:50";
 
 		new Select(driverMozilla.findElement(LocatorsT.selectDay)).selectByIndex(21);
