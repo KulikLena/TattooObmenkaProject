@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TattooObmenka suite">
+  
+  <test verbose="2" name="Set2 map test">
+      <groups>
+   <run>
+     
+  <include name = "Map" />
+   
+   </run>
+  </groups>
+   <packages>
+  
+  <package name = "graduateprojectpackage"/>
+  
+   </packages>
+  
+  </test> <!-- Set2 test -->
+  
+  
+  
+</suite> <!-- Addressbookonline suite -->

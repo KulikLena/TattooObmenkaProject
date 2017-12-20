@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TattooObmenka suite">
+  
+  <test verbose="2" name="Set All">
+   <groups>
+   <run>
+   <include name = "Login" />
+   <include name = "Map" />
+   <include name = "Order" />
+   <include name = "Tattoage" /> 
+   <include name = "Order Via Tab" />
+   <include name = "Show More" />
+   
+   </run>
+  </groups>
+   <packages>
+  
+  <package name = "graduateprojectpackage"/>
+  
+   </packages>
+  
+  </test> <!-- Set All test -->
+   
+  
+</suite> <!-- TattooObmenka suite -->

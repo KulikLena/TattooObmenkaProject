@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Addressbookonline suite]">
+  <test name="Set2 tattoage test(failed)">
+    <groups>
+      <run>
+        <include name="Map"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="graduateprojectpackage.Map">
+        <methods>
+          <include name="testMap"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Map -->
+    </classes>
+  </test> <!-- Set2 tattoage test(failed) -->
+</suite> <!-- Failed suite [Addressbookonline suite] -->

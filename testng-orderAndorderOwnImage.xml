@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TattooObmenka suite" >
+  
+ 
+  <test verbose="2" name="Order test">
+    <classes>
+      <class name="graduateprojectpackage.Order"/>
+      <class name="graduateprojectpackage.OrderOwnImage"/>
+    </classes>
+  </test> <!-- Set1 test -->
+ 
+   
+   
+</suite> <!-- TattooObmenka suite -->

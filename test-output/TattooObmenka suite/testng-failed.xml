@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TattooObmenka suite]">
+  <test name="Set All(failed)">
+    <groups>
+      <run>
+        <include name="Login"/>
+        <include name="Map"/>
+        <include name="Order"/>
+        <include name="Tattoage"/>
+        <include name="Order Via Tab"/>
+        <include name="Show More"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="graduateprojectpackage.Salon">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testSalon"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Salon -->
+      <class name="graduateprojectpackage.ArtistInOrder">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testSizes"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.ArtistInOrder -->
+      <class name="graduateprojectpackage.Calculator">
+        <methods>
+          <include name="setUp"/>
+          <include name="testSizes"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Calculator -->
+      <class name="graduateprojectpackage.Pics">
+        <methods>
+          <include name="setUp"/>
+          <include name="testPics"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Pics -->
+      <class name="graduateprojectpackage.Artist">
+        <methods>
+          <include name="testArtist"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Artist -->
+      <class name="graduateprojectpackage.Sizes">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSizes"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Sizes -->
+      <class name="graduateprojectpackage.OrderOwnImage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testSizes"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.OrderOwnImage -->
+      <class name="graduateprojectpackage.Services">
+        <methods>
+          <include name="testSizes"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Services -->
+      <class name="graduateprojectpackage.Order">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testSizes"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.Order -->
+      <class name="graduateprojectpackage.MapMozillla">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testMap"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.MapMozillla -->
+      <class name="graduateprojectpackage.SalonShowMore">
+        <methods>
+          <include name="setUp"/>
+          <include name="testSalon"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.SalonShowMore -->
+      <class name="graduateprojectpackage.PicsShowMore">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testPics"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.PicsShowMore -->
+      <class name="graduateprojectpackage.LoginOperaT">
+        <methods>
+          <include name="testLogin"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.LoginOperaT -->
+      <class name="graduateprojectpackage.LoginMozillaT">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testLogin" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.LoginMozillaT -->
+      <class name="graduateprojectpackage.ArtistShowMore">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testArtist"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.ArtistShowMore -->
+      <class name="graduateprojectpackage.SalonInOrder">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSizes"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- graduateprojectpackage.SalonInOrder -->
+    </classes>
+  </test> <!-- Set All(failed) -->
+</suite> <!-- Failed suite [TattooObmenka suite] -->

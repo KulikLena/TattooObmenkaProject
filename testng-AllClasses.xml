@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TattooObmenka suite">
+  
+  <test verbose="2" name="All tests">
+    <classes>
+      <class name="graduateprojectpackage.LoginMozillaT"/>    <!-- 1 -->
+      <class name="graduateprojectpackage.LoginOperaT"/>      <!-- 2 -->
+      <class name="graduateprojectpackage.MapMozillla"/>      <!-- 3 -->
+      <class name="graduateprojectpackage.Order"/>            <!-- 4 -->
+      <class name="graduateprojectpackage.OrderOwnImage"/>    <!-- 5 -->
+      <class name="graduateprojectpackage.Artist"/>           <!-- 6 -->
+      <class name="graduateprojectpackage.Salon"/>            <!-- 7 -->
+      <class name="graduateprojectpackage.Pics"/>             <!-- 8 -->
+      <class name="graduateprojectpackage.Sizes"/>            <!-- 9 -->
+      <class name="graduateprojectpackage.Calculator"/>       <!-- 10 -->
+      <class name="graduateprojectpackage.Services"/>         <!-- 11 -->
+      <class name="graduateprojectpackage.ArtistInOrder"/>    <!-- 12 -->
+      <class name="graduateprojectpackage.SalonInOrder"/>     <!-- 13 -->
+      <class name="graduateprojectpackage.ArtistShowMore"/>   <!-- 14 -->
+      <class name="graduateprojectpackage.SalonShowMore"/>    <!-- 15 -->
+      <class name="graduateprojectpackage.PicsShowMore"/>     <!-- 16-->
+    </classes>
+  
+  
+  </test> <!-- Set All test -->
+   
+  
+</suite> <!-- TattooObmenka suite -->
