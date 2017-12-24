@@ -25,7 +25,7 @@ public class Calculator {
     driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test (groups = { "Critical", "Tattoage" }, dependsOnGroups = {"Order"})
+  @Test (groups = { "Critical", "Tattoage" } /*dependsOnGroups = {"Order"}*/)
   public void testSizes() throws Exception {
     driverOpera.get(Parametrs“.baseUrl + "/");
     HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);

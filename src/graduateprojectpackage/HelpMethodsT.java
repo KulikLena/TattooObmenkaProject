@@ -48,22 +48,26 @@ public class HelpMethodsT {
 		action.moveToElement(web1).click().build().perform();
 		//engine.findElement(LocatorsT.buttonHome).click();
 		engine.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		List<WebElement> ordersTime = engine.findElements(By.xpath("//div[@class=\"row order\"]/div[5]"));
-		List<WebElement> ordersSalon = engine.findElements(By.xpath("//div[@class=\"row order\"]/div[3]"));
-		List<WebElement> ordersArtist = engine.findElements(By.xpath("//div[@class=\"row order\"]/div[4]"));
-
-		assertEquals(ordersSalon.size(), (number + 1));
-		assertEquals(ordersSalon.get(ordersSalon.size() - 1).getText(), salon);
-		assertEquals(ordersArtist.get(ordersArtist.size() - 1).getText(), artist);
-		assertEquals(ordersTime.get(ordersTime.size() - 1).getText(), date);
+		WebElement table = engine.findElement(By.xpath("//div[@class=\"main_page\"]/div"));
+		WebTable tableObj = new WebTable(table);
+		String ordersTime = tableObj.getCell(tableObj.getRowCount(), 5).getText();
+		String ordersSalon = tableObj.getCell(tableObj.getRowCount(), 3).getText();
+		String ordersArtist = tableObj.getCell(tableObj.getRowCount(), 4).getText();
+		
+		assertEquals(tableObj.getRowCount(), (number + 1));
+		assertEquals(ordersSalon, salon);
+		assertEquals(ordersArtist, artist);
+		assertEquals(ordersTime, date);
 		engine.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 
 	public static int countOrders(WebDriver drr) {
 		drr.findElement(LocatorsT.buttonHome).click();
-		List<WebElement> ordersTime = drr.findElements(By.xpath("//div[@class=\"row order\"]/div[5]"));
-		return ordersTime.size();
+		WebElement table = drr.findElement(By.xpath("//div[@class=\"main_page\"]/div"));
+		WebTable tableObj = new WebTable(table);
+		int size = tableObj.getRowCount();
+		return size;
 	}
 }
 
