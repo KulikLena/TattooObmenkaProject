@@ -4,12 +4,8 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
-
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
-
-import org.openqa.selenium.support.ui.Select;
 
 public class Order {
 
@@ -20,7 +16,7 @@ public class Order {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		OperaOptions operaOptions = new OperaOptions();
-		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.39\\opera.exe");
+		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -32,22 +28,13 @@ public class Order {
 		HelpMethodsT.insertNamePassword(ParametrsТ.emmail, ParametrsТ.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.buttonMainOrder).click();
-		int select = 8;
-		new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
-		String artist = driverOpera
-				.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
-		String date = "21-08 13:50";
 		
-		// driverOpera.findElement(By.id("saloon_hide")).click();
-		String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
-		new Select(driverOpera.findElement(LocatorsT.selectDay)).selectByIndex(21);
-		new Select(driverOpera.findElement(LocatorsT.selectMonth)).selectByIndex(8);
-		new Select(driverOpera.findElement(LocatorsT.selectHour)).selectByIndex(14);
-		new Select(driverOpera.findElement(LocatorsT.selectMinute)).selectByIndex(11);
-
-		WebElement buttonOrder = driverOpera.findElement(LocatorsT.buttonOrder);
-		Actions action = new Actions(driverOpera);
-		action.moveToElement(buttonOrder).click().perform();
+		 OrderPage pageObj = new OrderPage(driverOpera);		
+			String artist = pageObj.selectArtist(8);
+			String salon = pageObj.salonHide();
+			String date = pageObj.selectDate2(21,8,14,50);
+			pageObj.orderOrder();
+		
 		// салон не ассертится
 		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
 

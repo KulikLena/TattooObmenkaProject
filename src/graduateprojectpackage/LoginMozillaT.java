@@ -16,7 +16,6 @@ public class LoginMozillaT {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.gecko.driver", "d:\\geckodriver.exe");
@@ -110,7 +109,6 @@ public class LoginMozillaT {
 			fail(verificationErrorString);
 		}
 	}
-
 
 	private boolean isElementPresent(By by) {
 		try {

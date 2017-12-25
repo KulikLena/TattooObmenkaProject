@@ -4,103 +4,86 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.support.ui.Select;
 
 public class PicsShowMore {
-  private WebDriver driverOpera;
-  private boolean acceptNextAlert = true;
-  private StringBuffer verificationErrors = new StringBuffer();
+	private WebDriver driverOpera;
+	private boolean acceptNextAlert = true;
+	private StringBuffer verificationErrors = new StringBuffer();
 
-  @BeforeClass(alwaysRun = true)
-  public void setUp() throws Exception {
-	  OperaOptions operaOptions = new OperaOptions();
-		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.39\\opera.exe");
+	@BeforeClass(alwaysRun = true)
+	public void setUp() throws Exception {
+		OperaOptions operaOptions = new OperaOptions();
+		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
-		
-    driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
 
-  @Test (groups = { "Show More" }, dependsOnGroups = {"Critical"})
-  public void testPics() throws Exception {
-    driverOpera.get(Parametrs“.baseUrl + "/");
-    HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
-    int numberOfOrders= HelpMethodsT.countOrders(driverOpera);
-    driverOpera.findElement(LocatorsT.menuTatouage).click();
-	driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driverOpera.findElement(LocatorsT.selectGalery).click();
-    
-    driverOpera.findElement(LocatorsT.selectRealiste2).click();
-   
-    //String s = driverOpera.findElement(By.cssSelector("img[class=\"pic_left\"]")).getAttribute("src");
-    driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();
-    new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(5);
-    int select = 7;
-	String artist = driverOpera
-			.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
-	String date = "01/30/2018 12:00 AM";
+		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
 
-	String salon = new String(
-			driverOpera.findElement(LocatorsT.salonHide).getText());
-    
-     driverOpera.findElement(LocatorsT.selectDateInOrder).clear();
-    driverOpera.findElement(LocatorsT.selectDateInOrder).sendKeys(date);
-    
-    /*driverOpera.findElement(LocatorsT.buttonPrintPicture).click();
-    
-    assertEquals(driverOpera.findElement(LocatorsT.fieldPrintPicture).getAttribute("src"), s);*/
-   
-    WebElement buttonOrder= driverOpera.findElement(LocatorsT.buttonOrder);
-	Actions action = new Actions (driverOpera);
-	action.moveToElement(buttonOrder).click().perform();
-	
-	HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon,artist, date);
+	@Test(groups = { "Show More" }, dependsOnGroups = { "Critical" })
+	public void testPics() throws Exception {
+		driverOpera.get(Parametrs“.baseUrl + "/");
+		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
+		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
+		driverOpera.findElement(LocatorsT.menuTatouage).click();
+		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driverOpera.findElement(LocatorsT.selectGalery).click();
 
-    driverOpera.findElement(LocatorsT.buttonLogOut).click();
-  }
+		driverOpera.findElement(LocatorsT.selectRealiste2).click();
 
-  @AfterClass(alwaysRun = true)
-  public void tearDown() throws Exception {
-    driverOpera.quit();
-    String verificationErrorString = verificationErrors.toString();
-    if (!"".equals(verificationErrorString)) {
-      fail(verificationErrorString);
-    }
-  }
+		driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();
+		OrderPage pageObj = new OrderPage(driverOpera);
+		String artist = pageObj.selectArtist(4);
+		String salon = pageObj.salonHide();
+		String date = pageObj.selectDate("01/30/2018 12:00 AM");
+		pageObj.orderOrder();
 
-  private boolean isElementPresent(By by) {
-    try {
-      driverOpera.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
 
-  private boolean isAlertPresent() {
-    try {
-      driverOpera.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
+		driverOpera.findElement(LocatorsT.buttonLogOut).click();
+	}
 
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driverOpera.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
+	@AfterClass(alwaysRun = true)
+	public void tearDown() throws Exception {
+		driverOpera.quit();
+		String verificationErrorString = verificationErrors.toString();
+		if (!"".equals(verificationErrorString)) {
+			fail(verificationErrorString);
+		}
+	}
+
+	private boolean isElementPresent(By by) {
+		try {
+			driverOpera.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
+	private boolean isAlertPresent() {
+		try {
+			driverOpera.switchTo().alert();
+			return true;
+		} catch (NoAlertPresentException e) {
+			return false;
+		}
+	}
+
+	private String closeAlertAndGetItsText() {
+		try {
+			Alert alert = driverOpera.switchTo().alert();
+			String alertText = alert.getText();
+			if (acceptNextAlert) {
+				alert.accept();
+			} else {
+				alert.dismiss();
+			}
+			return alertText;
+		} finally {
+			acceptNextAlert = true;
+		}
+	}
 }

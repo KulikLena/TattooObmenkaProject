@@ -1,14 +1,11 @@
 package graduateprojectpackage;
 
-
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.support.ui.Select;
 
 public class ArtistShowMore {
 	private WebDriver driverOpera;
@@ -18,13 +15,13 @@ public class ArtistShowMore {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		OperaOptions operaOptions = new OperaOptions();
-		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.39\\opera.exe");
+		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test (groups = {  "Show More" }, dependsOnGroups = {"Critical"})
+	@Test(groups = { "Show More" }, dependsOnGroups = { "Critical" })
 	public void testArtist() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
@@ -36,27 +33,15 @@ public class ArtistShowMore {
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectRealiste).click();
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-				
-		int select = 7;
-		new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
-		String artist = driverOpera
-				.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
-		String date = "07/25/2018 9:00 AM";
 
-		String salon = new String(driverOpera.findElement(LocatorsT.salonHide).getText());
-		driverOpera.findElement(LocatorsT.selectDateInOrder).clear();
-		driverOpera.findElement(LocatorsT.selectDateInOrder).sendKeys(date);
-		
-		//driverOpera.findElement(LocatorsT.buttonChangePicture).click();
-		//HelpMethodsT.downloadPicture(driverOpera);
+		OrderPage pageObj = new OrderPage(driverOpera);
+		String artist = pageObj.selectArtist(7);
+		String salon = pageObj.salonHide();
+		String date = pageObj.selectDate("07/25/2018 9:00 AM");
+		pageObj.orderOrder();
 
-		 WebElement buttonOrder= driverOpera.findElement(LocatorsT.buttonOrder);
-			Actions action = new Actions (driverOpera);
-			action.moveToElement(buttonOrder).click().perform();
-		
-		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon,artist, date);
-		
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
+
 		driverOpera.findElement(LocatorsT.buttonLogOut).click();
 	}
 

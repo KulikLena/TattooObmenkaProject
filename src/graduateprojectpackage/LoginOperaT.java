@@ -16,7 +16,7 @@ public class LoginOperaT {
 	@BeforeClass(alwaysRun = true)
 	public void beforeClass() {
 		OperaOptions operaOptions = new OperaOptions();
-		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.39\\opera.exe");
+		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
 	}

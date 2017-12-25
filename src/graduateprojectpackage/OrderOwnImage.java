@@ -1,7 +1,6 @@
 package graduateprojectpackage;
 
 import java.util.concurrent.TimeUnit;
-
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
@@ -10,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrderOwnImage {
@@ -18,18 +16,17 @@ public class OrderOwnImage {
 
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
-	
-	
+
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		OperaOptions operaOptions = new OperaOptions();
-		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.39\\opera.exe");
+		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test (groups = { "Critical", "Order"}, dependsOnGroups = {"Map"})
+	@Test(groups = { "Critical", "Order" }, dependsOnGroups = { "Map" })
 	public void testSizes() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
@@ -68,36 +65,28 @@ public class OrderOwnImage {
 		driverOpera.findElement(LocatorsT.buttonSavePicture).click();
 		// download
 
-		new WebDriverWait(driverOpera, 30).until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.downloadPicture));
+		new WebDriverWait(driverOpera, 30)
+				.until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.downloadPicture));
 		driverOpera.findElement(LocatorsT.downloadPicture).click();
 		new WebDriverWait(driverOpera, 30)
 				.until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.buttonCalculatePrice));
 		driverOpera.findElement(LocatorsT.buttonCalculatePrice).click();
 
-		
 		new WebDriverWait(driverOpera, 30).until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.buttonOrder));
-		
+
 		driverOpera.findElement(LocatorsT.buttonOrder).click();
-		int select = 4;
-		new Select(driverOpera.findElement(LocatorsT.selectArtistInOrder)).selectByIndex(select);
-		String artist = driverOpera
-				.findElement(By.xpath("//select[@id=\"artist_select\"]/option[@value=\"" + select + "\"]")).getText();
-		String salon = new String(driverOpera.findElement(By.id("saloon_hide")).getText());
-		String date = "25-03 14:05";
 
-		new Select(driverOpera.findElement(LocatorsT.selectDay)).selectByIndex(25);
-		new Select(driverOpera.findElement(LocatorsT.selectMonth)).selectByIndex(3);
-		new Select(driverOpera.findElement(LocatorsT.selectHour)).selectByIndex(15);
-		new Select(driverOpera.findElement(LocatorsT.selectMinute)).selectByIndex(2);
+		OrderPage pageObj = new OrderPage(driverOpera);
+		String artist = pageObj.selectArtist(4);
+		String salon = pageObj.salonHide();
+		String date = pageObj.selectDate2(25, 3, 14, 5);
+		pageObj.orderOrder();
 
-		WebElement buttonOrder = driverOpera.findElement(LocatorsT.buttonOrder);
-		Actions actionOrder = new Actions(driverOpera);
-		action.moveToElement(buttonOrder).click().perform();
 		// Ò‡ÎÓÌ ÌÂ ‡ÒÒÂÚËÚÒˇ
 		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
 		System.out.println(DownloadImage.CompareImage(Parametrs“.ownpicture, Parametrs“.endpicture));
 		Reporter.log(DownloadImage.CompareImage(Parametrs“.ownpicture, Parametrs“.endpicture).toString());
-		driverOpera.findElement(By.linkText("Logout")).click();
+		driverOpera.findElement(LocatorsT.buttonLogOut).click();
 	}
 
 	@AfterClass(alwaysRun = true)

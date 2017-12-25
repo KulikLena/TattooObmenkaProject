@@ -12,11 +12,7 @@ import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MapMozillla {
@@ -31,11 +27,11 @@ public class MapMozillla {
 		System.setProperty("webdriver.gecko.driver", "d:\\geckodriver.exe");
 		myevent = new MyEventListener();
 		driver = new EventFiringWebDriver(new FirefoxDriver()).register(myevent);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test (groups = { "Map"}, dependsOnGroups = {"Login"})
+	@Test(groups = { "Map" }, dependsOnGroups = { "Login" })
 	public void testMap() throws Exception {
 		try {
 			driver.get(Parametrs“.baseUrl + "/");
@@ -60,16 +56,16 @@ public class MapMozillla {
 
 			for (Integer i = 1; i < (web.size() + 1); i++) {
 
-				String l = a[(i - 1)] = driver.findElement(By.xpath(".//div[@class=\"tab-content index\"]//div[" + i + "]//em"))
-						.getText();
+				String l = a[(i - 1)] = driver
+						.findElement(By.xpath(".//div[@class=\"tab-content index\"]//div[" + i + "]//em")).getText();
 				System.out.println(a[(i - 1)].toString());
-				Reporter.log(i+l);
+				Reporter.log(i + l);
 			}
 
 			driver.findElement(LocatorsT.contact).click();
 
 			for (String l : a) {
-				int j=1;
+				int j = 1;
 				new WebDriverWait(driver, 30)
 						.until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.mapInputField));
 				driver.findElement(LocatorsT.mapInputField).click();
@@ -79,7 +75,7 @@ public class MapMozillla {
 				Refine.screenShot(Parametrs“.folder, Parametrs“.format, driver);
 				try {
 					String s = driver.findElement(LocatorsT.mapDescription).getText();
-					Reporter.log(j+s);
+					Reporter.log(j + s);
 					System.out.println(s);
 				} catch (NoSuchElementException e) {
 					myevent.onException(e, driver);

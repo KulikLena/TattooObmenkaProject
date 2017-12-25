@@ -32,7 +32,7 @@ public class HelpMethodsT {
 
 		drive.findElement(LocatorsT.buttonDownloadPicture).clear();
 		drive.findElement(LocatorsT.buttonDownloadPicture).sendKeys(pictureSource);
-		
+
 		new WebDriverWait(drive, 30).until(ExpectedConditions.visibilityOfElementLocated(LocatorsT.buttonSavePicture));
 
 		drive.findElement(LocatorsT.buttonSavePicture).click();
@@ -46,14 +46,14 @@ public class HelpMethodsT {
 		WebElement web1 = engine.findElement(LocatorsT.buttonHome);
 		Actions action = new Actions(engine);
 		action.moveToElement(web1).click().build().perform();
-		//engine.findElement(LocatorsT.buttonHome).click();
+		// engine.findElement(LocatorsT.buttonHome).click();
 		engine.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		WebElement table = engine.findElement(By.xpath("//div[@class=\"main_page\"]/div"));
 		WebTable tableObj = new WebTable(table);
 		String ordersTime = tableObj.getCell(tableObj.getRowCount(), 5).getText();
 		String ordersSalon = tableObj.getCell(tableObj.getRowCount(), 3).getText();
 		String ordersArtist = tableObj.getCell(tableObj.getRowCount(), 4).getText();
-		
+
 		assertEquals(tableObj.getRowCount(), (number + 1));
 		assertEquals(ordersSalon, salon);
 		assertEquals(ordersArtist, artist);
@@ -70,4 +70,3 @@ public class HelpMethodsT {
 		return size;
 	}
 }
-
