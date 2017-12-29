@@ -25,7 +25,7 @@ public class SalonInOrder {
 	}
 
 	@Test(groups = { "Critical", "Order Via Tab" }, dependsOnGroups = { "Tattoage" })
-	public void testSizes() throws Exception {
+	public void testSalonInOrder() throws Exception {
 		driverOpera.get(ParametrsÒ.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(ParametrsÒ.emmail, ParametrsÒ.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
@@ -50,7 +50,7 @@ public class SalonInOrder {
 		pageObj.orderOrder();
 
 		// ñàëîí íå àññåğòèòñÿ
-		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
 
 		driverOpera.findElement(LocatorsT.buttonLogOut).click();
 	}

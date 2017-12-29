@@ -23,12 +23,11 @@ public class SalonShowMore {
 	}
 
 	@Test(groups = { "Show More" }, dependsOnGroups = { "Critical" })
-	public void testSalon() throws Exception {
+	public void testSalonShowMore() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectSalon).click();
 		driverOpera.findElement(LocatorsT.salonShowMore).click();
 		driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();

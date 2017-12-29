@@ -28,7 +28,6 @@ public class Pics {
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectGalery).click();
 
 		driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();

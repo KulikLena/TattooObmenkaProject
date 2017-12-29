@@ -35,15 +35,11 @@ public class MapMozillla {
 	public void testMap() throws Exception {
 		try {
 			driver.get(Parametrs“.baseUrl + "/");
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driver);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			WebElement web1 = driver.findElement(LocatorsT.menuTatouage);
 			Actions action = new Actions(driver);
 			action.moveToElement(web1).click().perform();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.findElement(LocatorsT.selectSalon).click();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

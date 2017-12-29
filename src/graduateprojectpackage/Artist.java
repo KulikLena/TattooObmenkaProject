@@ -27,12 +27,9 @@ public class Artist {
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectArtist).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		OrderPage pageObj = new OrderPage(driverOpera);
 		String artist = pageObj.selectArtist(1);
 		String salon = pageObj.selectSalon(5);

@@ -27,14 +27,12 @@ public class OrderOwnImage {
 	}
 
 	@Test(groups = { "Critical", "Order" }, dependsOnGroups = { "Map" })
-	public void testSizes() throws Exception {
+	public void testOrderOwnImage() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectCalculator).click();
-		driverOpera.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		WebElement web1 = driverOpera.findElement(LocatorsT.buttonDownloadPicture);
 		Actions action = new Actions(driverOpera);
@@ -83,7 +81,7 @@ public class OrderOwnImage {
 		pageObj.orderOrder();
 
 		// Ò‡ÎÓÌ ÌÂ ‡ÒÒÂÚËÚÒˇ
-		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
 		System.out.println(DownloadImage.CompareImage(Parametrs“.ownpicture, Parametrs“.endpicture));
 		Reporter.log(DownloadImage.CompareImage(Parametrs“.ownpicture, Parametrs“.endpicture).toString());
 		driverOpera.findElement(LocatorsT.buttonLogOut).click();

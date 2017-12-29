@@ -6,6 +6,7 @@ import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class PicsShowMore {
 	private WebDriver driverOpera;
@@ -18,17 +19,15 @@ public class PicsShowMore {
 		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
-
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@Test(groups = { "Show More" }, dependsOnGroups = { "Critical" })
-	public void testPics() throws Exception {
+	public void testPicsShoMore() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectGalery).click();
 
 		driverOpera.findElement(LocatorsT.selectRealiste2).click();

@@ -24,14 +24,12 @@ public class Calculator {
 	}
 
 	@Test(groups = { "Critical", "Tattoage" }, dependsOnGroups = { "Order" })
-	public void testSizes() throws Exception {
+	public void testCalculator() throws Exception {
 		driverOpera.get(ParametrsÒ.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(ParametrsÒ.emmail, ParametrsÒ.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectCalculator).click();
-		driverOpera.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		HelpMethodsT.downloadPicture(driverOpera, "d:\\image1.jpg");
 
@@ -45,7 +43,7 @@ public class Calculator {
 		pageObj.orderOrder();
 
 		// ñàëîí íå àññåðòèòñÿ
-		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
 
 		driverOpera.findElement(LocatorsT.buttonLogOut).click();
 	}

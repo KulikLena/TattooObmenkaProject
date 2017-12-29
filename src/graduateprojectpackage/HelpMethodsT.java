@@ -1,20 +1,19 @@
 package graduateprojectpackage;
 
 import static org.testng.Assert.assertEquals;
-
-import java.util.List;
+import org.testng.asserts.SoftAssert;
 import java.util.concurrent.TimeUnit;
-
+import org.junit.rules.Verifier;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelpMethodsT {
 
+	public static Verifier verifier;
 	public static void insertNamePassword(String email, String password, WebDriver dr) {
 
 		dr.findElement(LocatorsT.login).click();
@@ -55,11 +54,12 @@ public class HelpMethodsT {
 		String ordersArtist = tableObj.getCell(tableObj.getRowCount(), 4).getText();
 
 		assertEquals(tableObj.getRowCount(), (number + 1));
-		assertEquals(ordersSalon, salon);
-		assertEquals(ordersArtist, artist);
-		assertEquals(ordersTime, date);
-		engine.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(ordersSalon, salon);
+		softAssert.assertEquals(ordersArtist, artist);
+		softAssert.assertEquals(ordersTime, date);
+		softAssert.assertAll();
+		
 	}
 
 	public static int countOrders(WebDriver drr) {

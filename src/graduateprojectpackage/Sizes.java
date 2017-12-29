@@ -27,14 +27,11 @@ public class Sizes {
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectSizes).click();
-		driverOpera.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String s = driverOpera.findElement(LocatorsT.priceInTableSizes).getText();
 		driverOpera.findElement(LocatorsT.selectFirstTraits).click();
 		driverOpera.findElement(LocatorsT.buttonOrderTattoo).click();
 
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		assertEquals(driverOpera.findElement(LocatorsT.priceInOrder).getText().replaceAll("\\D+", "").trim(), s);
 
 		OrderPage pageObj = new OrderPage(driverOpera);

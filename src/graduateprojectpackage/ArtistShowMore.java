@@ -22,17 +22,14 @@ public class ArtistShowMore {
 	}
 
 	@Test(groups = { "Show More" }, dependsOnGroups = { "Critical" })
-	public void testArtist() throws Exception {
+	public void testArtistShowMore() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
 		driverOpera.findElement(LocatorsT.menuTatouage).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectArtist).click();
 		driverOpera.findElement(LocatorsT.selectArtistSeb).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driverOpera.findElement(LocatorsT.selectRealiste).click();
-		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		OrderPage pageObj = new OrderPage(driverOpera);
 		String artist = pageObj.selectArtist(7);

@@ -22,8 +22,8 @@ public class Order {
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-	@Test(groups = { "Critical", "Order"}, dependsOnGroups = {"Map"} )
-	public void testSizes() throws Exception {
+	@Test(groups = { "Critical", "Order"}, dependsOnGroups = {"Map"})
+	public void testOrder() throws Exception {
 		driverOpera.get(ParametrsТ.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(ParametrsТ.emmail, ParametrsТ.password, driverOpera);
 		int numberOfOrders = HelpMethodsT.countOrders(driverOpera);
@@ -36,7 +36,7 @@ public class Order {
 			pageObj.orderOrder();
 		
 		// салон не ассертится
-		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, "-", artist, date);
+		HelpMethodsT.assertOrdersTable(numberOfOrders, driverOpera, salon, artist, date);
 
 		driverOpera.findElement(By.linkText("Logout")).click();
 	}

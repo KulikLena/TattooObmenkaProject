@@ -40,9 +40,6 @@ public class WebTable {
 			WebElement currentRow = tableRows.get(rowIdx - 1);
 			List<WebElement> tableCols = currentRow.findElements(By.className("col-md-2"));
 			WebElement cell = tableCols.get(colIdx - 1);
-			// WebElement cellEditor =
-			// cell.findElements(By.tagName("input")).get(editorIdx);
-			// return cellEditor;
 			return cell;
 		} catch (NoSuchElementException e) {
 			throw new NoSuchElementException("Failed to get cell");
