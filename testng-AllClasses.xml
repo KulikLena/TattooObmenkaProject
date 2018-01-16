@@ -8,17 +8,10 @@
       <class name="graduateprojectpackage.MapMozillla"/>      <!-- 3 -->
       <class name="graduateprojectpackage.Order"/>            <!-- 4 -->
       <class name="graduateprojectpackage.OrderOwnImage"/>    <!-- 5 -->
-      <class name="graduateprojectpackage.Artist"/>           <!-- 6 -->
-      <class name="graduateprojectpackage.Salon"/>            <!-- 7 -->
-      <class name="graduateprojectpackage.Pics"/>             <!-- 8 -->
-      <class name="graduateprojectpackage.Sizes"/>            <!-- 9 -->
-      <class name="graduateprojectpackage.Calculator"/>       <!-- 10 -->
-      <class name="graduateprojectpackage.Services"/>         <!-- 11 -->
-      <class name="graduateprojectpackage.ArtistInOrder"/>    <!-- 12 -->
-      <class name="graduateprojectpackage.SalonInOrder"/>     <!-- 13 -->
-      <class name="graduateprojectpackage.ArtistShowMore"/>   <!-- 14 -->
-      <class name="graduateprojectpackage.SalonShowMore"/>    <!-- 15 -->
-      <class name="graduateprojectpackage.PicsShowMore"/>     <!-- 16-->
+      <class name="graduateprojectpackage.OrderTests"/>       <!-- +5 -->
+      <class name="graduateprojectpackage.OrderViaTabTests"/> <!-- +3 -->
+      <class name="graduateprojectpackage.ShowMoreTests"/>    <!-- +3 -->
+    
     </classes>
   
   

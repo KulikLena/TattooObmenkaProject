@@ -13,19 +13,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginMozillaT {
 
 	private static WebDriver driverMozilla;
-	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.gecko.driver", "d:\\geckodriver.exe");
 		driverMozilla = new FirefoxDriver();
-
-	}
-
-	@BeforeMethod
-	public static void base() {
-		// выбрасывает исключение - поместила в трай/кэтч
 		try {
 			driverMozilla.get(ParametrsТ.baseUrl + "/");
 		} catch (InvalidArgumentException e) {
@@ -97,10 +90,6 @@ public class LoginMozillaT {
 
 	}
 
-	@AfterMethod
-	public void afterMethod() {
-	}
-
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driverMozilla.quit();
@@ -110,36 +99,4 @@ public class LoginMozillaT {
 		}
 	}
 
-	private boolean isElementPresent(By by) {
-		try {
-			driverMozilla.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-
-	private boolean isAlertPresent() {
-		try {
-			driverMozilla.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			return false;
-		}
-	}
-
-	private String closeAlertAndGetItsText() {
-		try {
-			Alert alert = driverMozilla.switchTo().alert();
-			String alertText = alert.getText();
-			if (acceptNextAlert) {
-				alert.accept();
-			} else {
-				alert.dismiss();
-			}
-			return alertText;
-		} finally {
-			acceptNextAlert = true;
-		}
-	}
 }

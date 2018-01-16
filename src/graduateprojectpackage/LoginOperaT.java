@@ -10,7 +10,6 @@ import org.openqa.selenium.opera.OperaOptions;
 public class LoginOperaT {
 
 	private WebDriver driverOpera;
-	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
 	@BeforeClass(alwaysRun = true)
@@ -19,12 +18,6 @@ public class LoginOperaT {
 		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
 		driverOpera = new OperaDriver(operaOptions);
-	}
-
-	@BeforeMethod(alwaysRun = true)
-	public void setUp() throws Exception {
-		// выбрасывает исключение - поместила в трай/кэтч
-
 		try {
 			driverOpera.get(ParametrsТ.baseUrl + "/");
 		} catch (InvalidArgumentException e) {
@@ -90,10 +83,6 @@ public class LoginOperaT {
 
 	}
 
-	@AfterMethod
-	public void afterMethod() {
-	}
-
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driverOpera.quit();
@@ -103,36 +92,4 @@ public class LoginOperaT {
 		}
 	}
 
-	private boolean isElementPresent(By by) {
-		try {
-			driverOpera.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-
-	private boolean isAlertPresent() {
-		try {
-			driverOpera.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			return false;
-		}
-	}
-
-	private String closeAlertAndGetItsText() {
-		try {
-			Alert alert = driverOpera.switchTo().alert();
-			String alertText = alert.getText();
-			if (acceptNextAlert) {
-				alert.accept();
-			} else {
-				alert.dismiss();
-			}
-			return alertText;
-		} finally {
-			acceptNextAlert = true;
-		}
-	}
 }

@@ -1,737 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="32" passed="32">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
-    <line>
-      <![CDATA[17 rue des innocents Paris 1er]]>
-    </line>
-    <line>
-      <![CDATA[225 rue des lombards Paris 4e]]>
-    </line>
-    <line>
-      <![CDATA[34 Rue Joubert Paris 09]]>
-    </line>
-    <line>
-      <![CDATA[424 boulevard de Sébastopol Paris 4e]]>
-    </line>
-    <line>
-      <![CDATA[544 rue des lombars Paris 01]]>
-    </line>
-    <line>
-      <![CDATA[679 rue rambuteau Paris 1er]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003212680.png]]>
-    </line>
-    <line>
-      <![CDATA[1Франция, Иль-де-Франс, Париж, I округ Парижа]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003216312.png]]>
-    </line>
-    <line>
-      <![CDATA[1Франция, Иль-де-Франс, Париж, IV округ Парижа]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003219885.png]]>
-    </line>
-    <line>
-      <![CDATA["InvalidAdress"]]>
-    </line>
-    <line>
-      <![CDATA["InvalidAdress"]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003253802.png]]>
-    </line>
-    <line>
-      <![CDATA[1Франция, Иль-де-Франс, Париж]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003257404.png]]>
-    </line>
-    <line>
-      <![CDATA["InvalidAdress"]]>
-    </line>
-    <line>
-      <![CDATA["InvalidAdress"]]>
-    </line>
-    <line>
-      <![CDATA[ScreenFile=d:\report\1513003291128.png]]>
-    </line>
-    <line>
-      <![CDATA[1Франция, Иль-де-Франс, Париж]]>
-    </line>
-    <line>
-      <![CDATA[DownloadImage.CompareImage(ownpicture, endpicture)]]>
-    </line>
   </reporter-output>
-  <suite name="TattooObmenka suite" duration-ms="1226002" started-at="2017-12-11T14:36:14Z" finished-at="2017-12-11T14:56:40Z">
+  <suite name="Default suite" duration-ms="70204" started-at="2018-01-16T15:20:30Z" finished-at="2018-01-16T15:21:40Z">
     <groups>
-      <group name="Order">
-        <method signature="Order.testSizes()[pri:0, instance:graduateprojectpackage.Order@343f4d3d]" name="testSizes" class="graduateprojectpackage.Order"/>
-        <method signature="OrderOwnImage.testSizes()[pri:0, instance:graduateprojectpackage.OrderOwnImage@5442a311]" name="testSizes" class="graduateprojectpackage.OrderOwnImage"/>
-      </group> <!-- Order -->
-      <group name="Order Via Tab">
-        <method signature="ArtistInOrder.testSizes()[pri:0, instance:graduateprojectpackage.ArtistInOrder@239963d8]" name="testSizes" class="graduateprojectpackage.ArtistInOrder"/>
-        <method signature="SalonInOrder.testSizes()[pri:0, instance:graduateprojectpackage.SalonInOrder@3abbfa04]" name="testSizes" class="graduateprojectpackage.SalonInOrder"/>
-        <method signature="Services.testSizes()[pri:0, instance:graduateprojectpackage.Services@146ba0ac]" name="testSizes" class="graduateprojectpackage.Services"/>
-      </group> <!-- Order Via Tab -->
       <group name="Critical">
-        <method signature="LoginMozillaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" class="graduateprojectpackage.LoginMozillaT"/>
-        <method signature="LoginOperaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" class="graduateprojectpackage.LoginOperaT"/>
-        <method signature="Order.testSizes()[pri:0, instance:graduateprojectpackage.Order@343f4d3d]" name="testSizes" class="graduateprojectpackage.Order"/>
-        <method signature="OrderOwnImage.testSizes()[pri:0, instance:graduateprojectpackage.OrderOwnImage@5442a311]" name="testSizes" class="graduateprojectpackage.OrderOwnImage"/>
-        <method signature="Artist.testArtist()[pri:0, instance:graduateprojectpackage.Artist@548e7350]" name="testArtist" class="graduateprojectpackage.Artist"/>
-        <method signature="Calculator.testSizes()[pri:0, instance:graduateprojectpackage.Calculator@754ba872]" name="testSizes" class="graduateprojectpackage.Calculator"/>
-        <method signature="Pics.testPics()[pri:0, instance:graduateprojectpackage.Pics@204f30ec]" name="testPics" class="graduateprojectpackage.Pics"/>
-        <method signature="Salon.testSalon()[pri:0, instance:graduateprojectpackage.Salon@77cd7a0]" name="testSalon" class="graduateprojectpackage.Salon"/>
-        <method signature="Sizes.testSizes()[pri:0, instance:graduateprojectpackage.Sizes@e25b2fe]" name="testSizes" class="graduateprojectpackage.Sizes"/>
-        <method signature="ArtistInOrder.testSizes()[pri:0, instance:graduateprojectpackage.ArtistInOrder@239963d8]" name="testSizes" class="graduateprojectpackage.ArtistInOrder"/>
-        <method signature="SalonInOrder.testSizes()[pri:0, instance:graduateprojectpackage.SalonInOrder@3abbfa04]" name="testSizes" class="graduateprojectpackage.SalonInOrder"/>
-        <method signature="Services.testSizes()[pri:0, instance:graduateprojectpackage.Services@146ba0ac]" name="testSizes" class="graduateprojectpackage.Services"/>
+        <method signature="LoginOperaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" class="graduateprojectpackage.LoginOperaT"/>
       </group> <!-- Critical -->
-      <group name="Tattoage">
-        <method signature="Artist.testArtist()[pri:0, instance:graduateprojectpackage.Artist@548e7350]" name="testArtist" class="graduateprojectpackage.Artist"/>
-        <method signature="Calculator.testSizes()[pri:0, instance:graduateprojectpackage.Calculator@754ba872]" name="testSizes" class="graduateprojectpackage.Calculator"/>
-        <method signature="Pics.testPics()[pri:0, instance:graduateprojectpackage.Pics@204f30ec]" name="testPics" class="graduateprojectpackage.Pics"/>
-        <method signature="Salon.testSalon()[pri:0, instance:graduateprojectpackage.Salon@77cd7a0]" name="testSalon" class="graduateprojectpackage.Salon"/>
-        <method signature="Sizes.testSizes()[pri:0, instance:graduateprojectpackage.Sizes@e25b2fe]" name="testSizes" class="graduateprojectpackage.Sizes"/>
-      </group> <!-- Tattoage -->
       <group name="Login">
-        <method signature="LoginMozillaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" class="graduateprojectpackage.LoginMozillaT"/>
-        <method signature="LoginOperaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" class="graduateprojectpackage.LoginOperaT"/>
+        <method signature="LoginOperaT.testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" class="graduateprojectpackage.LoginOperaT"/>
       </group> <!-- Login -->
-      <group name="Map">
-        <method signature="MapMozillla.testMap()[pri:0, instance:graduateprojectpackage.MapMozillla@1794d431]" name="testMap" class="graduateprojectpackage.MapMozillla"/>
-      </group> <!-- Map -->
-      <group name="Show More">
-        <method signature="ArtistShowMore.testArtist()[pri:0, instance:graduateprojectpackage.ArtistShowMore@57fffcd7]" name="testArtist" class="graduateprojectpackage.ArtistShowMore"/>
-        <method signature="PicsShowMore.testPics()[pri:0, instance:graduateprojectpackage.PicsShowMore@5f341870]" name="testPics" class="graduateprojectpackage.PicsShowMore"/>
-        <method signature="SalonShowMore.testSalon()[pri:0, instance:graduateprojectpackage.SalonShowMore@14bf9759]" name="testSalon" class="graduateprojectpackage.SalonShowMore"/>
-      </group> <!-- Show More -->
     </groups>
-    <test name="All tests" duration-ms="1226002" started-at="2017-12-11T14:36:14Z" finished-at="2017-12-11T14:56:40Z">
-      <class name="graduateprojectpackage.Salon">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Salon@77cd7a0]" name="setUp" is-config="true" duration-ms="2012" started-at="2017-12-11T16:45:03Z" finished-at="2017-12-11T16:45:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSalon()[pri:0, instance:graduateprojectpackage.Salon@77cd7a0]" name="testSalon" duration-ms="63217" depends-on-groups="Order" started-at="2017-12-11T16:45:05Z" finished-at="2017-12-11T16:46:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSalon -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Salon@77cd7a0]" name="tearDown" is-config="true" duration-ms="631" started-at="2017-12-11T16:46:08Z" finished-at="2017-12-11T16:46:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Salon -->
-      <class name="graduateprojectpackage.LoginMozillaT">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="setUp" is-config="true" duration-ms="4576" started-at="2017-12-11T16:36:14Z" finished-at="2017-12-11T16:36:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="6109" started-at="2017-12-11T16:36:19Z" finished-at="2017-12-11T16:36:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="9541" started-at="2017-12-11T16:36:25Z" data-provider="myData" finished-at="2017-12-11T16:36:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@69ee81fc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:36:35Z" finished-at="2017-12-11T16:36:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3570" started-at="2017-12-11T16:36:35Z" finished-at="2017-12-11T16:36:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="7967" started-at="2017-12-11T16:36:38Z" data-provider="myData" finished-at="2017-12-11T16:36:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@15f47664]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:36:46Z" finished-at="2017-12-11T16:36:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3092" started-at="2017-12-11T16:36:46Z" finished-at="2017-12-11T16:36:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="7037" started-at="2017-12-11T16:36:49Z" data-provider="myData" finished-at="2017-12-11T16:36:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@13bc8645]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:36:56Z" finished-at="2017-12-11T16:36:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3524" started-at="2017-12-11T16:36:56Z" finished-at="2017-12-11T16:37:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="7024" started-at="2017-12-11T16:37:00Z" data-provider="myData" finished-at="2017-12-11T16:37:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@42e25b0b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:37:07Z" finished-at="2017-12-11T16:37:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="5002" started-at="2017-12-11T16:37:07Z" finished-at="2017-12-11T16:37:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="5973" started-at="2017-12-11T16:37:12Z" data-provider="myData" finished-at="2017-12-11T16:37:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@7f284218]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:37:18Z" finished-at="2017-12-11T16:37:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="4178" started-at="2017-12-11T16:37:18Z" finished-at="2017-12-11T16:37:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="7480" started-at="2017-12-11T16:37:22Z" data-provider="myData" finished-at="2017-12-11T16:37:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@295cf707]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3367" started-at="2017-12-11T16:37:29Z" finished-at="2017-12-11T16:37:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:37:29Z" finished-at="2017-12-11T16:37:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="6239" started-at="2017-12-11T16:37:33Z" data-provider="myData" finished-at="2017-12-11T16:37:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@4c012563]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:37:39Z" finished-at="2017-12-11T16:37:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3344" started-at="2017-12-11T16:37:39Z" finished-at="2017-12-11T16:37:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="6725" started-at="2017-12-11T16:37:42Z" data-provider="myData" finished-at="2017-12-11T16:37:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@1c852c0f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:37:49Z" finished-at="2017-12-11T16:37:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="base()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="base" is-config="true" duration-ms="3743" started-at="2017-12-11T16:37:49Z" finished-at="2017-12-11T16:37:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="testLogin" duration-ms="6307" started-at="2017-12-11T16:37:53Z" data-provider="myData" finished-at="2017-12-11T16:37:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@55c53a33]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="tearDown" is-config="true" duration-ms="3941" started-at="2017-12-11T16:37:59Z" finished-at="2017-12-11T16:38:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginMozillaT@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:37:59Z" finished-at="2017-12-11T16:37:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- graduateprojectpackage.LoginMozillaT -->
-      <class name="graduateprojectpackage.Services">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Services@146ba0ac]" name="setUp" is-config="true" duration-ms="2011" started-at="2017-12-11T16:49:34Z" finished-at="2017-12-11T16:49:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.Services@146ba0ac]" name="testSizes" duration-ms="69099" depends-on-groups="Tattoage" started-at="2017-12-11T16:49:36Z" finished-at="2017-12-11T16:50:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Services@146ba0ac]" name="tearDown" is-config="true" duration-ms="616" started-at="2017-12-11T16:50:45Z" finished-at="2017-12-11T16:50:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Services -->
-      <class name="graduateprojectpackage.OrderOwnImage">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.OrderOwnImage@5442a311]" name="setUp" is-config="true" duration-ms="2043" started-at="2017-12-11T16:42:39Z" finished-at="2017-12-11T16:42:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.OrderOwnImage@5442a311]" name="testSizes" duration-ms="76161" depends-on-groups="Map" started-at="2017-12-11T16:42:41Z" finished-at="2017-12-11T16:43:57Z">
-          <reporter-output>
-            <line>
-              <![CDATA[DownloadImage.CompareImage(ownpicture, endpicture)]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.OrderOwnImage@5442a311]" name="tearDown" is-config="true" duration-ms="649" started-at="2017-12-11T16:43:57Z" finished-at="2017-12-11T16:43:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.OrderOwnImage -->
-      <class name="graduateprojectpackage.PicsShowMore">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.PicsShowMore@5f341870]" name="setUp" is-config="true" duration-ms="1939" started-at="2017-12-11T16:55:33Z" finished-at="2017-12-11T16:55:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testPics()[pri:0, instance:graduateprojectpackage.PicsShowMore@5f341870]" name="testPics" duration-ms="65098" depends-on-groups="Critical" started-at="2017-12-11T16:55:34Z" finished-at="2017-12-11T16:56:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPics -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.PicsShowMore@5f341870]" name="tearDown" is-config="true" duration-ms="641" started-at="2017-12-11T16:56:40Z" finished-at="2017-12-11T16:56:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.PicsShowMore -->
-      <class name="graduateprojectpackage.SalonShowMore">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.SalonShowMore@14bf9759]" name="setUp" is-config="true" duration-ms="2039" started-at="2017-12-11T16:54:23Z" finished-at="2017-12-11T16:54:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSalon()[pri:0, instance:graduateprojectpackage.SalonShowMore@14bf9759]" name="testSalon" duration-ms="67023" depends-on-groups="Critical" started-at="2017-12-11T16:54:25Z" finished-at="2017-12-11T16:55:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSalon -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.SalonShowMore@14bf9759]" name="tearDown" is-config="true" duration-ms="596" started-at="2017-12-11T16:55:32Z" finished-at="2017-12-11T16:55:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.SalonShowMore -->
-      <class name="graduateprojectpackage.SalonInOrder">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.SalonInOrder@3abbfa04]" name="setUp" is-config="true" duration-ms="1894" started-at="2017-12-11T16:52:01Z" finished-at="2017-12-11T16:52:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.SalonInOrder@3abbfa04]" name="testSizes" duration-ms="74432" depends-on-groups="Tattoage" started-at="2017-12-11T16:52:03Z" finished-at="2017-12-11T16:53:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.SalonInOrder@3abbfa04]" name="tearDown" is-config="true" duration-ms="648" started-at="2017-12-11T16:53:18Z" finished-at="2017-12-11T16:53:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.SalonInOrder -->
-      <class name="graduateprojectpackage.Order">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Order@343f4d3d]" name="setUp" is-config="true" duration-ms="2095" started-at="2017-12-11T16:41:40Z" finished-at="2017-12-11T16:41:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.Order@343f4d3d]" name="testSizes" duration-ms="56240" depends-on-groups="Map" started-at="2017-12-11T16:41:42Z" finished-at="2017-12-11T16:42:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Order@343f4d3d]" name="tearDown" is-config="true" duration-ms="593" started-at="2017-12-11T16:42:38Z" finished-at="2017-12-11T16:42:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Order -->
-      <class name="graduateprojectpackage.Pics">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Pics@204f30ec]" name="setUp" is-config="true" duration-ms="2075" started-at="2017-12-11T16:46:09Z" finished-at="2017-12-11T16:46:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testPics()[pri:0, instance:graduateprojectpackage.Pics@204f30ec]" name="testPics" duration-ms="60366" depends-on-groups="Order" started-at="2017-12-11T16:46:11Z" finished-at="2017-12-11T16:47:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPics -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Pics@204f30ec]" name="tearDown" is-config="true" duration-ms="612" started-at="2017-12-11T16:47:11Z" finished-at="2017-12-11T16:47:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Pics -->
-      <class name="graduateprojectpackage.Calculator">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Calculator@754ba872]" name="setUp" is-config="true" duration-ms="2013" started-at="2017-12-11T16:48:23Z" finished-at="2017-12-11T16:48:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.Calculator@754ba872]" name="testSizes" duration-ms="68275" depends-on-groups="Order" started-at="2017-12-11T16:48:25Z" finished-at="2017-12-11T16:49:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Calculator@754ba872]" name="tearDown" is-config="true" duration-ms="648" started-at="2017-12-11T16:49:33Z" finished-at="2017-12-11T16:49:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Calculator -->
-      <class name="graduateprojectpackage.ArtistInOrder">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.ArtistInOrder@239963d8]" name="setUp" is-config="true" duration-ms="1996" started-at="2017-12-11T16:50:45Z" finished-at="2017-12-11T16:50:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.ArtistInOrder@239963d8]" name="testSizes" duration-ms="73209" depends-on-groups="Tattoage" started-at="2017-12-11T16:50:47Z" finished-at="2017-12-11T16:52:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.ArtistInOrder@239963d8]" name="tearDown" is-config="true" duration-ms="650" started-at="2017-12-11T16:52:01Z" finished-at="2017-12-11T16:52:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.ArtistInOrder -->
-      <class name="graduateprojectpackage.Artist">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Artist@548e7350]" name="setUp" is-config="true" duration-ms="2018" started-at="2017-12-11T16:43:58Z" finished-at="2017-12-11T16:44:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testArtist()[pri:0, instance:graduateprojectpackage.Artist@548e7350]" name="testArtist" duration-ms="62573" depends-on-groups="Order" started-at="2017-12-11T16:44:00Z" finished-at="2017-12-11T16:45:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testArtist -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Artist@548e7350]" name="tearDown" is-config="true" duration-ms="606" started-at="2017-12-11T16:45:02Z" finished-at="2017-12-11T16:45:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Artist -->
-      <class name="graduateprojectpackage.MapMozillla">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.MapMozillla@1794d431]" name="setUp" is-config="true" duration-ms="3555" started-at="2017-12-11T16:39:44Z" finished-at="2017-12-11T16:39:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testMap()[pri:0, instance:graduateprojectpackage.MapMozillla@1794d431]" name="testMap" duration-ms="102872" depends-on-groups="Login" started-at="2017-12-11T16:39:48Z" finished-at="2017-12-11T16:41:31Z">
-          <reporter-output>
-            <line>
-              <![CDATA[17 rue des innocents Paris 1er]]>
-            </line>
-            <line>
-              <![CDATA[225 rue des lombards Paris 4e]]>
-            </line>
-            <line>
-              <![CDATA[34 Rue Joubert Paris 09]]>
-            </line>
-            <line>
-              <![CDATA[424 boulevard de Sébastopol Paris 4e]]>
-            </line>
-            <line>
-              <![CDATA[544 rue des lombars Paris 01]]>
-            </line>
-            <line>
-              <![CDATA[679 rue rambuteau Paris 1er]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003212680.png]]>
-            </line>
-            <line>
-              <![CDATA[1Франция, Иль-де-Франс, Париж, I округ Парижа]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003216312.png]]>
-            </line>
-            <line>
-              <![CDATA[1Франция, Иль-де-Франс, Париж, IV округ Парижа]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003219885.png]]>
-            </line>
-            <line>
-              <![CDATA["InvalidAdress"]]>
-            </line>
-            <line>
-              <![CDATA["InvalidAdress"]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003253802.png]]>
-            </line>
-            <line>
-              <![CDATA[1Франция, Иль-де-Франс, Париж]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003257404.png]]>
-            </line>
-            <line>
-              <![CDATA["InvalidAdress"]]>
-            </line>
-            <line>
-              <![CDATA["InvalidAdress"]]>
-            </line>
-            <line>
-              <![CDATA[ScreenFile=d:\report\1513003291128.png]]>
-            </line>
-            <line>
-              <![CDATA[1Франция, Иль-де-Франс, Париж]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testMap -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.MapMozillla@1794d431]" name="tearDown" is-config="true" duration-ms="9172" started-at="2017-12-11T16:41:31Z" finished-at="2017-12-11T16:41:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.MapMozillla -->
-      <class name="graduateprojectpackage.Sizes">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.Sizes@e25b2fe]" name="setUp" is-config="true" duration-ms="1998" started-at="2017-12-11T16:47:12Z" finished-at="2017-12-11T16:47:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSizes()[pri:0, instance:graduateprojectpackage.Sizes@e25b2fe]" name="testSizes" duration-ms="68400" depends-on-groups="Order" started-at="2017-12-11T16:47:14Z" finished-at="2017-12-11T16:48:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSizes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.Sizes@e25b2fe]" name="tearDown" is-config="true" duration-ms="625" started-at="2017-12-11T16:48:22Z" finished-at="2017-12-11T16:48:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.Sizes -->
+    <test name="Default test" duration-ms="70204" started-at="2018-01-16T15:20:30Z" finished-at="2018-01-16T15:21:40Z">
       <class name="graduateprojectpackage.LoginOperaT">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="beforeClass" is-config="true" duration-ms="2310" started-at="2017-12-11T16:38:03Z" finished-at="2017-12-11T16:38:05Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="beforeClass" is-config="true" duration-ms="9224" started-at="2018-01-16T17:20:30Z" finished-at="2018-01-16T17:20:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="6800" started-at="2017-12-11T16:38:05Z" finished-at="2017-12-11T16:38:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="10663" started-at="2017-12-11T16:38:12Z" data-provider="myData" finished-at="2017-12-11T16:38:23Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="9246" started-at="2018-01-16T17:20:39Z" data-provider="myData" finished-at="2018-01-16T17:20:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@1d483de4]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@1807f5a7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:38:23Z" finished-at="2017-12-11T16:38:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3477" started-at="2017-12-11T16:38:23Z" finished-at="2017-12-11T16:38:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="8556" started-at="2017-12-11T16:38:26Z" data-provider="myData" finished-at="2017-12-11T16:38:35Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="8702" started-at="2018-01-16T17:20:48Z" data-provider="myData" finished-at="2018-01-16T17:20:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@35399441]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@45385f75]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:38:35Z" finished-at="2017-12-11T16:38:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3228" started-at="2017-12-11T16:38:35Z" finished-at="2017-12-11T16:38:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6398" started-at="2017-12-11T16:38:38Z" data-provider="myData" finished-at="2017-12-11T16:38:44Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="6783" started-at="2018-01-16T17:20:57Z" data-provider="myData" finished-at="2018-01-16T17:21:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@f99f5e0]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@2fb0623e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:38:44Z" finished-at="2017-12-11T16:38:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3342" started-at="2017-12-11T16:38:44Z" finished-at="2017-12-11T16:38:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6531" started-at="2017-12-11T16:38:48Z" data-provider="myData" finished-at="2017-12-11T16:38:54Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="6296" started-at="2018-01-16T17:21:04Z" data-provider="myData" finished-at="2018-01-16T17:21:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@1bae316d]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@13526e59]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:38:54Z" finished-at="2017-12-11T16:38:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3281" started-at="2017-12-11T16:38:54Z" finished-at="2017-12-11T16:38:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6580" started-at="2017-12-11T16:38:58Z" data-provider="myData" finished-at="2017-12-11T16:39:04Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="6254" started-at="2018-01-16T17:21:10Z" data-provider="myData" finished-at="2018-01-16T17:21:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@13d4992d]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@769a1df5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:39:04Z" finished-at="2017-12-11T16:39:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="2912" started-at="2017-12-11T16:39:04Z" finished-at="2017-12-11T16:39:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6613" started-at="2017-12-11T16:39:07Z" data-provider="myData" finished-at="2017-12-11T16:39:14Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="5855" started-at="2018-01-16T17:21:16Z" data-provider="myData" finished-at="2018-01-16T17:21:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@176b75f7]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@32115b28]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3384" started-at="2017-12-11T16:39:14Z" finished-at="2017-12-11T16:39:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:39:14Z" finished-at="2017-12-11T16:39:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6555" started-at="2017-12-11T16:39:17Z" data-provider="myData" finished-at="2017-12-11T16:39:24Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="5411" started-at="2018-01-16T17:21:22Z" data-provider="myData" finished-at="2018-01-16T17:21:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@573906eb]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@41488b16]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-12-11T16:39:24Z" finished-at="2017-12-11T16:39:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="3007" started-at="2017-12-11T16:39:24Z" finished-at="2017-12-11T16:39:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6532" started-at="2017-12-11T16:39:27Z" data-provider="myData" finished-at="2017-12-11T16:39:33Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="5908" started-at="2018-01-16T17:21:27Z" data-provider="myData" finished-at="2018-01-16T17:21:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@609db546]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@9cb8225]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:39:33Z" finished-at="2017-12-11T16:39:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="setUp" is-config="true" duration-ms="4073" started-at="2017-12-11T16:39:33Z" finished-at="2017-12-11T16:39:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="testLogin" duration-ms="6386" started-at="2017-12-11T16:39:37Z" data-provider="myData" finished-at="2017-12-11T16:39:44Z">
+        <test-method status="PASS" signature="testLogin(graduateprojectpackage.TestLoginParametr)[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="testLogin" duration-ms="5879" started-at="2018-01-16T17:21:33Z" data-provider="myData" finished-at="2018-01-16T17:21:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[graduateprojectpackage.TestLoginParametr@59e505b2]]>
+                <![CDATA[graduateprojectpackage.TestLoginParametr@47c81abf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-12-11T16:39:44Z" finished-at="2017-12-11T16:39:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.LoginOperaT@39c0f4a]" name="tearDown" is-config="true" duration-ms="595" started-at="2017-12-11T16:39:44Z" finished-at="2017-12-11T16:39:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.LoginOperaT@1e88b3c]" name="tearDown" is-config="true" duration-ms="596" started-at="2018-01-16T17:21:39Z" finished-at="2018-01-16T17:21:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- graduateprojectpackage.LoginOperaT -->
-      <class name="graduateprojectpackage.ArtistShowMore">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:graduateprojectpackage.ArtistShowMore@57fffcd7]" name="setUp" is-config="true" duration-ms="2054" started-at="2017-12-11T16:53:18Z" finished-at="2017-12-11T16:53:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testArtist()[pri:0, instance:graduateprojectpackage.ArtistShowMore@57fffcd7]" name="testArtist" duration-ms="61899" depends-on-groups="Critical" started-at="2017-12-11T16:53:20Z" finished-at="2017-12-11T16:54:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testArtist -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:graduateprojectpackage.ArtistShowMore@57fffcd7]" name="tearDown" is-config="true" duration-ms="639" started-at="2017-12-11T16:54:22Z" finished-at="2017-12-11T16:54:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- graduateprojectpackage.ArtistShowMore -->
-    </test> <!-- All tests -->
-  </suite> <!-- TattooObmenka suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

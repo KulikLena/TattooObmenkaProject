@@ -13,8 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Map {
 	private WebDriver driver;
-	private boolean acceptNextAlert = true;
-	//private static WebDriverEventListener myevent;
+	// private static WebDriverEventListener myevent;
 	private StringBuffer verificationErrors = new StringBuffer();
 
 	@BeforeClass(alwaysRun = true)
@@ -23,13 +22,14 @@ public class Map {
 		OperaOptions operaOptions = new OperaOptions();
 		operaOptions.setBinary("c:\\Program Files\\Opera\\449.0.2725.64\\opera.exe");
 		System.setProperty("webdriver.opera.driver", "d:\\operadriver.exe");
-		//myevent = new MyEventListener();
-		//driver = new EventFiringWebDriver(new OperaDriver(operaOptions)).register(myevent);
+		// myevent = new MyEventListener();
+		// driver = new EventFiringWebDriver(new
+		// OperaDriver(operaOptions)).register(myevent);
 		driver = new OperaDriver(operaOptions);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test /*(groups = { "Map"})*/
+	@Test /* (groups = { "Map"}) */
 	public void testMap() throws Exception {
 		driver.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driver);
@@ -59,7 +59,7 @@ public class Map {
 				driver.findElement(LocatorsT.mapSearchButton).click();
 				try {
 					String s = driver.findElement(LocatorsT.mapDescription).getText();
-					//Refine.screenShot(Parametrs“.folder, Parametrs“.format, driver);
+					// Refine.screenShot(Parametrs“.folder, Parametrs“.format, driver);
 					System.out.println(s);
 				} catch (NoSuchElementException e) {
 					// TODO Auto-generated catch block
@@ -80,36 +80,4 @@ public class Map {
 		}
 	}
 
-	private boolean isElementPresent(By by) {
-		try {
-			driver.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-
-	private boolean isAlertPresent() {
-		try {
-			driver.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			return false;
-		}
-	}
-
-	private String closeAlertAndGetItsText() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			String alertText = alert.getText();
-			if (acceptNextAlert) {
-				alert.accept();
-			} else {
-				alert.dismiss();
-			}
-			return alertText;
-		} finally {
-			acceptNextAlert = true;
-		}
-	}
 }

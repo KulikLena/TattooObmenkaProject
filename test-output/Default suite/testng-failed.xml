@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="graduateprojectpackage.ArtistShowMore">
+      <class name="graduateprojectpackage.OrderViaTabTests">
         <methods>
-          <include name="tearDown"/>
+          <include name="testArtistInOrder"/>
           <include name="setUp"/>
-          <include name="testArtist"/>
+          <include name="testSalonInOrder"/>
+          <include name="tearDown"/>
+          <include name="testServices"/>
         </methods>
-      </class> <!-- graduateprojectpackage.ArtistShowMore -->
+      </class> <!-- graduateprojectpackage.OrderViaTabTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -17,11 +17,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MapMozillla {
 	private WebDriver driver;
-	private boolean acceptNextAlert = true;
 	private static WebDriverEventListener myevent;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.gecko.driver", "d:\\geckodriver.exe");
@@ -31,7 +30,7 @@ public class MapMozillla {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test(groups = { "Map" }, dependsOnGroups = { "Login" })
+	@Test(groups = { "Map" })
 	public void testMap() throws Exception {
 		try {
 			driver.get(Parametrs“.baseUrl + "/");
@@ -84,7 +83,7 @@ public class MapMozillla {
 		}
 	}
 
-	@AfterClass(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
@@ -93,36 +92,5 @@ public class MapMozillla {
 		}
 	}
 
-	private boolean isElementPresent(By by) {
-		try {
-			driver.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
 
-	private boolean isAlertPresent() {
-		try {
-			driver.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			return false;
-		}
-	}
-
-	private String closeAlertAndGetItsText() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			String alertText = alert.getText();
-			if (acceptNextAlert) {
-				alert.accept();
-			} else {
-				alert.dismiss();
-			}
-			return alertText;
-		} finally {
-			acceptNextAlert = true;
-		}
-	}
 }

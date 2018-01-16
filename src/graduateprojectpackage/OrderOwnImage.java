@@ -13,11 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrderOwnImage {
 	private WebDriver driverOpera;
-
-	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 		OperaOptions operaOptions = new OperaOptions();
 		operaOptions.setBinary("c:\\Program Files\\Opera\\49.0.2725.64\\opera.exe");
@@ -26,7 +24,7 @@ public class OrderOwnImage {
 		driverOpera.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test(groups = { "Critical", "Order" }, dependsOnGroups = { "Map" })
+	@Test(groups = { "Critical", "Order" })
 	public void testOrderOwnImage() throws Exception {
 		driverOpera.get(Parametrs“.baseUrl + "/");
 		HelpMethodsT.insertNamePassword(Parametrs“.emmail, Parametrs“.password, driverOpera);
@@ -87,7 +85,7 @@ public class OrderOwnImage {
 		driverOpera.findElement(LocatorsT.buttonLogOut).click();
 	}
 
-	@AfterClass(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driverOpera.quit();
 		String verificationErrorString = verificationErrors.toString();
@@ -96,36 +94,4 @@ public class OrderOwnImage {
 		}
 	}
 
-	private boolean isElementPresent(By by) {
-		try {
-			driverOpera.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-
-	private boolean isAlertPresent() {
-		try {
-			driverOpera.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			return false;
-		}
-	}
-
-	private String closeAlertAndGetItsText() {
-		try {
-			Alert alert = driverOpera.switchTo().alert();
-			String alertText = alert.getText();
-			if (acceptNextAlert) {
-				alert.accept();
-			} else {
-				alert.dismiss();
-			}
-			return alertText;
-		} finally {
-			acceptNextAlert = true;
-		}
-	}
 }
